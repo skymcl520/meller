@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.yue{list-style: none;}
+		.yue li{
+			float: right;
+			width: 96%;
+			position: relative;
+			overflow: hidden;
+			font-size: 14px;
+			color: #333;
+			padding: 15px 0px;
+		}
+		.yue span{float: left;}
+		.yue .span11{
+			float: right;
+			width: 44px;
+			height: 24px;
+			background: #FF6600;
+			border-radius: 24px;
+			position: relative;
+			margin-top: 11px;
+			margin-right: 10px;
+		}	
+		.span33{
+			float: right;
+			width: 44px;
+			height: 24px;
+			background: #ccc;
+			border-radius: 24px;
+			position: relative;
+			margin-top: 11px;
+			margin-right: 10px;
+		}
+		.yue .but{
+			float: right;
+			width: 44px;
+			height: 24px;
+			background: #ccc;
+			border-radius: 24px;
+			position: relative;
+			margin-top: 11px;
+			margin-right: 10px;
+		}
+		.yue .em_left{
+			width: 22px;
+			position: absolute;
+			left: 1px;
+			top: 1px;
+			height: 22px;
+			background: #FFF;
+			border-radius: 22px;
+			font-style: normal;
+		}
+		.yue .em_right{
+			width: 22px;
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			height: 22px;
+			background: #FFF;
+			border-radius: 22px;
+		}
+		.yue .remaining{
+			margin-left: 10px;
+			display: none;
+		}
+		.yue i{
+			float: right;
+			position: relative;
+			margin-top: 11px;
+			/*margin-right: 10px;*/
+		}
+	</style>
+	<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<ul class="yue">
+		<li>
+			<span>账户余额</span>
+			<span class="remaining">余额0元</span>
+			<span class="but">
+				<em class="em_left"></em>
+			</span>
+		</li>
+		<li>
+			<span>分享积分</span>
+			<span class="remaining">积分:0.00(10积分抵1分)</span>
+			<span class="but">
+				<em class="em_left"></em>
+			</span>
+		</li>
+		<!-- <li id="go_coupon">
+			<span>优惠卷</span>
+			<span class="remaining">可用优惠卷0张</span>
+			<i class="fa fa-angle-right fa-fw fa-lg"></i>
+			
+		</li>
+		<li id="pay_type">
+			<span>支付方式</span>
+			<span class="remaining">支付宝支付(推荐)</span>
+			<i class="fa fa-angle-right fa-fw fa-lg"></i>
+		</li> -->
+	</ul>
+	<script>
+		$(".but").click(function(){
+		if($(this).children().hasClass('em_left')){
+			$(this).css('background','#FF6600');
+			$(this).children().removeClass().addClass("em_right");
+			$(this).prev().css('display','inline-block')
+		}else{
+			$(this).css('background','#ccc');
+			$(this).children().removeClass().addClass("em_left");
+			$(this).prev().css('display','none')
+		}
+	})
+	</script>
+</body>
+</html>
+	
